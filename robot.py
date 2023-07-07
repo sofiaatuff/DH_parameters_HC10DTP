@@ -47,12 +47,12 @@ def calculate_robot_homogeneous_matrix(homogeneous_matrices):
 
 # DH parameters for Motoman HC10DPT Robot
 dh_parameters = [
-    {'a': 0.275, 'alpha': 0, 'd': 0, 'theta': 0.1},
-    {'a': 0, 'alpha': np.pi/2, 'd': 0.301, 'theta': 0.2 + np.pi/2 },
-    {'a': 0.7, 'alpha': 0, 'd': 0, 'theta': 0.3},
-    {'a': 0.19, 'alpha': np.pi/2, 'd': 0, 'theta': 0.4},
-    {'a': 0.0, 'alpha': -np.pi/2, 'd': 0.5, 'theta': 0.5 - np.pi/2},
-    {'a': 0, 'alpha': np.pi/2, 'd': 0.17, 'theta': 0.6}
+    {'a': 0, 'alpha': 0, 'd': 0.275, 'theta': 0.1},
+    {'a': 0.301, 'alpha': np.pi/2, 'd': 0, 'theta': 0.2 + np.pi/2 },
+    {'a': 0.7, 'alpha': 0, 'd': 0, 'theta': 0.3+ np.pi/2},
+    {'a': 0, 'alpha': np.pi/2, 'd': 0.19, 'theta': 0.4 + np.pi},
+    {'a': 0.0, 'alpha': -np.pi/2, 'd': 0.5, 'theta': 0.5},
+    {'a': 0, 'alpha': np.pi/2, 'd': 0.162, 'theta': 0.6}
 ]
 
 

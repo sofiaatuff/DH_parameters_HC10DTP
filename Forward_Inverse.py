@@ -1,8 +1,8 @@
 import numpy as np
 
 # Denavit-Hartenberg parameters for the robot
-d = [0, 0.301, 0, 0, 0.5, 0.17]
-a = [0.275, 0, 0.7, 0.19, 0, 0]
+d = [0.275, 0, 0, 0.19, 0.5, 0.162]
+a = [0, 0.301, 0.7, 0, 0, 0]
 alpha = [0, np.pi/2, 0, np.pi/2, -np.pi/2, np.pi/2]
 
 def forward_kinematics(theta):
