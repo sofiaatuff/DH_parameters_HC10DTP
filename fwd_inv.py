@@ -95,7 +95,7 @@ def visualize_robot(theta):
 
 
 # Example usage:
-target_position = np.array([0.3, 0.3, 0.5])
+target_position = np.array([0.9, 0.9, 0.9])
 joint_angles = inverse_kinematics(target_position)
 print("Joint angles:", joint_angles)
 end_effector_pos = forward_kinematics(joint_angles)
