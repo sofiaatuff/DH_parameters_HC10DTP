@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def forward_kinematics(theta):
-    dh_params = np.array([[0.275, 0., 0., 0.],
-                          [0, 0.301, 0.5 * pi, 0.5 * pi],
-                          [0., 0.700, 0., 0.5 * pi],
-                          [0.190, 0., 0.5 * pi, pi],
+    dh_params = np.array([[0.275, 0, 0, 0.5 * pi],
+                          [0, 0.301, 0, 0.5 * pi],
+                          [0.700, 0, 0.5 * pi, 0],
+                          [0.190, 0, 0.5 * pi, -0.5 * pi],
                           [0.500, 0., -0.5 * pi, 0.],
                           [0.162, 0., 0.5 * pi, 0.]])
     
@@ -27,10 +27,10 @@ def forward_kinematics(theta):
 
 
 def inverse_kinematics(target_pos):
-    dh_params = np.array([[0.275, 0., 0., 0.],
-                          [0, 0.301, 0.5 * pi, 0.5 * pi],
-                          [0., 0.700, 0., 0.5 * pi],
-                          [0.190, 0., 0.5 * pi, pi],
+    dh_params = np.array([[0.275, 0, 0, 0.5 * pi],
+                          [0, 0.301, 0, 0.5 * pi],
+                          [0.700, 0, 0.5 * pi, 0],
+                          [0.190, 0, 0.5 * pi, -0.5 * pi],
                           [0.500, 0., -0.5 * pi, 0.],
                           [0.162, 0., 0.5 * pi, 0.]])
     
@@ -61,10 +61,10 @@ def inverse_kinematics(target_pos):
 
 
 def visualize_robot(theta):
-    dh_params = np.array([[0.275, 0., 0., 0.],
-                          [0, 0.301, 0.5 * pi, 0.5 * pi],
-                          [0., 0.700, 0., 0.5 * pi],
-                          [0.190, 0., 0.5 * pi, pi],
+    dh_params = np.array([[0.275, 0, 0, 0.5 * pi],
+                          [0, 0.301, 0, 0.5 * pi],
+                          [0.700, 0, 0.5 * pi, 0],
+                          [0.190, 0, 0.5 * pi, -0.5 * pi],
                           [0.500, 0., -0.5 * pi, 0.],
                           [0.162, 0., 0.5 * pi, 0.]])
     

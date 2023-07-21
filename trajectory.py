@@ -19,9 +19,9 @@ def main():
     # trajectory
     # =====================================
 
-    frames = [Frame.from_euler_3(np.array([0.0 * pi, 0., 0.0 * pi]), np.array([[+0.25], [+0.0], [+0.95]])),
-              Frame.from_euler_3(np.array([0.0 * pi, 0., 0.0 * pi]), np.array([[+0.25], [-0.0], [+0.55]])),
-              Frame.from_euler_3(np.array([0.0 * pi, 0., 0.0 * pi]), np.array([[+0.25], [-0.0], [+1.0]]))]
+    frames = [Frame.from_euler_3(np.array([0.0 * pi, 0.0, 0.0 * pi]), np.array([[+0.2], [+0.0], [+0.5]])),
+              Frame.from_euler_3(np.array([0.0 * pi, 0.0, 0.0 * pi]), np.array([[+0.2], [+0.0], [+0.75]])),
+              Frame.from_euler_3(np.array([0.0 * pi, 0.0, 0.0 * pi]), np.array([[+0.2], [-0.0], [+1.0]]))]
     time_points = np.array([0., 8., 8.])
     trajectory = RobotTrajectory(robot, frames, time_points)
     trajectory.show(motion="p2p")
