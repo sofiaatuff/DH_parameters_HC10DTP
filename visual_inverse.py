@@ -7,18 +7,18 @@ def main():
     np.set_printoptions(precision=3, suppress=True)
 
     dh_params = np.array([[0.275, 0, 0, 0.5 * pi],
-                          [0, 0.301, 0, 0.5 * pi],
-                          [0.700, 0, 0.5 * pi, 0],
-                          [0.190, 0, 0.5 * pi, -0.5 * pi],
-                          [0.500, 0., -0.5 * pi, 0.],
-                          [0.162, 0., 0.5 * pi, 0.]])
+                          [0, 0.190, 0, 0.5 * pi],
+                          [0.700, 0, 0.5 * pi, -0.5 * pi],
+                          [0.190, 0,  -0.5 * pi, pi],
+                          [0.500, 0, 0.5 * pi, 0 ],
+                          [0.162, 0., 0.5 * pi, 0.5 * pi]])
     robot = RobotSerial(dh_params)
 
     # =====================================
     # inverse
     # =====================================
 
-    xyz = np.array([[0.4127], [0.], [0.7182]])
+    xyz = np.array([[0.0], [0.], [0.0]])
     abc = np.array([0.0 * pi, 0., 0.0 * pi])
     end = Frame.from_euler_3(abc, xyz)
     robot.inverse(end)
@@ -28,7 +28,7 @@ def main():
     robot.show()
 
     # example of unsuccessful inverse kinematics
-    xyz = np.array([[2.5], [1.5], [2.9]])
+    xyz = np.array([[0.5], [0], [0.9]])
     end = Frame.from_euler_3(abc, xyz)
     robot.inverse(end)
 
